@@ -21,9 +21,9 @@ Potential future improvements could include:
 - Allowing the user to specify the data for the QR code
 - Allowing the user to specify the size of the QR code
 
-  ## Sample EXE
+## Sample EXE
 
-  There is an Alpha release for you to try out the exe if you dont wish to clone the project.
+There is an Alpha release for you to try out the exe if you dont wish to clone the project.
 
   ```url
 
