@@ -4,9 +4,9 @@ This project is a simple QR code generator that uses the API provided by qrserve
 
 ## Table of Contents
 
-- [Current State](#Current State)
-- [Future Improvements](#Future Improvements)
-- Sample EXE](#Sample EXE)
+1. [Current State](#current-state)
+2. [Future Improvements](#future-improvements)
+3. [Sample EXE](#sample-exe)
 
 ## Current State
 
