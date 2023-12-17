@@ -25,3 +25,9 @@ Potential future improvements could include:
   ## Sample EXE
 
   There is an Alpha release for you to try out the exe if you dont wish to clone the project.
+
+  ```url
+
+  https://github.com/Pmacdon15/QrCodeGen/releases/tag/QrCode
+
+  ```
