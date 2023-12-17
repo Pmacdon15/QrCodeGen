@@ -4,13 +4,13 @@ using System.Windows.Forms;
 
 namespace QrCodeGen
 {
-    public partial class Form1 : Form
+    public partial class QrCode : Form
     {
-        public Form1()
+        public QrCode()
         {
             InitializeComponent();
         }
-               
+
         private async void buttonGen_Click(object sender, EventArgs e)
         {
             // Get the text value from userInputBox
@@ -54,6 +54,37 @@ namespace QrCodeGen
             }
         }
 
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            // Check if the QR code image is available
+            if (qrCodeBox1.Image == null)
+            {
+                MessageBox.Show("No QR code available to save. Generate a QR code first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            // Prompt the user to choose a location and filename for saving the QR code image
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "PNG Image|*.png";
+                saveFileDialog.Title = "Save QR Code Image";
+                saveFileDialog.FileName = "qrcode.png";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        // Save the QR code image to the selected file path
+                        qrCodeBox1.Image.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Png);
+                        MessageBox.Show("QR code saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error saving QR code: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+    
     }
 }

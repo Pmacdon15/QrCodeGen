@@ -1,6 +1,6 @@
 ﻿namespace QrCodeGen
 {
-    partial class Form1
+    partial class QrCode
     {
         /// <summary>
         ///  Required designer variable.
@@ -37,7 +37,7 @@
             // 
             // qrCodeBox1
             // 
-            qrCodeBox1.Location = new Point(579, 50);
+            qrCodeBox1.Location = new Point(608, 51);
             qrCodeBox1.Name = "qrCodeBox1";
             qrCodeBox1.Size = new Size(180, 187);
             qrCodeBox1.TabIndex = 0;
@@ -70,8 +70,9 @@
             buttonSave.TabIndex = 3;
             buttonSave.Text = "Save";
             buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Click += buttonSave_Click;
             // 
-            // Form1
+            // QrCode
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -80,7 +81,7 @@
             Controls.Add(buttonGen);
             Controls.Add(userInputBox);
             Controls.Add(qrCodeBox1);
-            Name = "Form1";
+            Name = "QrCode";
             Text = "Qr Code Generator";
             ((System.ComponentModel.ISupportInitialize)qrCodeBox1).EndInit();
             ResumeLayout(false);
