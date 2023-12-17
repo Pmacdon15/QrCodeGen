@@ -18,7 +18,6 @@ The project is currently capable of:
 
 Potential future improvements could include:
 - Triggering the QR code generation process upon the press of the Enter key
-- Adding error handling for failed API requests
 - Allowing the user to specify the data for the QR code
 - Allowing the user to specify the size of the QR code
 
